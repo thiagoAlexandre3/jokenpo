@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "sono";
+    src: url(../fonts/Sono/static/Sono/Sono-Regular.ttf) format(opentype);
+}
+
+body {
+    background-color: rgb(95, 94, 94);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    height: 60px;
+    column-gap: 20px;
+}
+.infos_user {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    order: 1;
+    height: 50px;
+    border-radius: 15px 5px 5px 15px;
+    background-color: white;
+}
+.lista_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    margin: 0px 10px 0px 0px;
+    height: 100%;
+    font-family: "sono", times;
+    font-size: 10px;
+    list-style: none;
+}
+.lista_infos {
+    margin: 0px 20px 0px 0px;
+    padding: 0px;
+    height: 100%;
+    /*border-bottom: 1px solid black;*/
+    font-family: "sono", times;
+    font-size: 20px;
+    list-style: none;
+    color: rgb(95, 94, 94);
+}
+.avatar{  
+    display: flex;
+    height: 50px;
+    width: 50px;
+    order: 2;
+    cursor: pointer;
+}
+
+.imagem_avatar {
+    max-height: 100%;
+    width: auto;
+    border-radius: 5px;
+}
+
+/*
+input:checked + .avatar p{
+    display: block;
+    position: fixed;
+    right: 60px;
+}
+.lavatar {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background-color: cadetblue; teste para posicionar
+    position: absolute;
+    /*right: 0px;
+    top: 0px; não precisa desse item, visto que o absolute já resolve
+}
+#seleciona_avatar {
+    display: none;
+}
+.teste {
+    display: none;
+}
+*/
+.container_players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+.jogadores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 190px;
+    background-color: sienna;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#player1, #player2{
+    border: 2px solid rgb(95, 94, 94);
+}
+.cjogadores {
+    font-family: "sono", times;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: rgb(2, 119, 119);
+    border-radius: 70px;
+    row-gap: 70px;
+}
+.nickname{
+    display: flex;
+    align-items: center;
+    column-gap: 5%;
+}
+.lnickname{
+    font-family: "sono", times;
+    font-size: 25px;
+    color:aliceblue;
+}
+.cnickname {
+    border: 0px;
+    border-bottom: 1px solid white;
+    background-color: rgb(2, 119, 119);
+    padding: 0px 3px;
+    height: 29px;
+    width: 200px;
+    outline: none;
+    font-family: "sono", times;
+    font-size: 22px;
+    color: aliceblue;
+}
+button {
+    background-color: lightcoral;
+    font-family: "sono", times;
+    font-size: 30px;
+    border: none;
+    box-shadow: 1px 1px 0px 2px rgb(105, 105, 105);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*
+.container_loading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    
+}
+.loading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 119, 119);
+    height: 75px;
+    width: 250px;
+    border-radius: 70px;
+}
+.cloading {
+    font-family: "sono", times;
+    font-size: 16px;
+    color: aliceblue;
+}
+*/

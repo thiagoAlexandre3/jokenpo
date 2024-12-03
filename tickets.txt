@@ -1,0 +1,41 @@
+bug: jogador não é inserido na sessão correta {
+    descrição - há sessão ficou aberta, por motivos desconhecidos, no momento que o player está para ser inserido na partida. sendo assim há uma sessão aberta com o id dele, que não é a sessão atual. nesse cenário, o jogador ficará em duas partidas, suas jogadas serão registradas na partida anterior, com isso vai dar timeout ou então resultados de vencedor errado
+
+    solução - localizar os ips dos dois players e só se estiver correto não dar insert na partida ou localizar onde permite a sessão ficar aberta
+
+    prioridade - baixa
+}
+
+bug: não acha fila {
+    descrição - a busca por partida tem um while que é quebrado ao alcançar timeout, dando refresh na tela oq atrapalha a experiencia do usuário
+
+    solução - o melhor é usar jQuery desabilitando o botão de jogar e implementar um time_out que habilitada o botão mudando o texto para buscar fila novamente
+
+    prioridade - alta
+}
+
+melhoria: se as sessões não forem fechadas ao entrar acessar index.php, é possível que o jogador não consiga mais acessar partidas
+
+melhoria: usar ip para identificação buga lógica de encontrar partida {
+    descrição - quando usamos ip, o mesmo ip pode jogar com ele mesmo ficando impreciso as comparações de ip para achar partida
+    
+    solução - criar chave aleatória única para identificar players
+    
+    prioridade - baixa
+}
+
+
+
+Melhorias futuras para o código:
+
+- atualizar nome de jogadores
+
+- mostrar pontos dos jogadores
+
+- não poder clicar duas vezes no botão jogar
+
+- melhorar script.js
+
+- Esconder menu ao clicar fora dele ou duas vezes nele:
+Para isso tem soluções mais avançadas no código que podemos fazer ao aprender do javascript, porém a que podemos testar já com os conhecimentos que temos é criar um body de 100% na tela, organizando os elementos todos dentro dele, e colocar um onclick nesse body
+

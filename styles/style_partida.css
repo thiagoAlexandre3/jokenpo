@@ -1,0 +1,65 @@
+@charset "UFT-8";
+@font-face {
+    font-family: 'sono';
+    src: url(../fonts/Sono/static/Sono/Sono-Regular.ttf) format(opentype)
+}
+
+.container_players {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cjogadores {
+    font-family: 'sono', Times;
+    font-size: 20px;
+}
+.container_opcoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    column-gap: 10px;
+}
+
+/*
+.bpedra, .bpapel, .btesoura {
+   
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 20px;
+}
+n consegui fazer, então vamos pela imagem mesmo
+*/
+
+.imagem1, .imagem2, .imagem3 {
+    background-color: darkkhaki;
+    border-radius: 20px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    flex: 0 0 200px;
+    height: 200px;  /*tive que colocar isso pq estava com 4px a mais */
+    /*
+    flex: 1 1 200px;
+
+    comentário, pois se tirar o container cresce na tela toda
+    */
+}
+
+.pedra, .papel, .tesoura {
+    /*
+    max-width: 100%;
+    height: auto;
+
+    o ideal seria deixar assim, porém fazendo a imagem oculpa toda a tela.
+    */
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
