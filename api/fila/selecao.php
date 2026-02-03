@@ -42,6 +42,7 @@ while($row = mysqli_fetch_assoc($confere_insercao)){
     $guarda_insercao[1] = $row['id'];
 }
 
+//vc é o 3, e tem um 4
 if((($count_identifica_user_load % 2) != 0) && (count($guarda_ip_load) > $count_identifica_user_load)){
     $sql_limpa_fila = "UPDATE load_partida SET aceita = 'Y' WHERE jogador = '{$guarda_ip_load[$count_identifica_user_load]}' OR jogador = '{$guarda_ip_load[$count_identifica_user_load + 1]}';";
     if(count($guarda_insercao) >= 1){
@@ -57,10 +58,13 @@ if((($count_identifica_user_load % 2) != 0) && (count($guarda_ip_load) > $count_
             //só depois melhorar! não tira isso, é importante, o esperar é uma contingencia apenas. pode muito bem ocorrer esse cenário
         }
     }
+//vc é o 4
 } elseif (($count_identifica_user_load % 2) == 0) {
     $sql_cria_partida = "INSERT INTO partida (id_jogador1, id_jogador2, sessao) VALUES ('{$guarda_ip_load[$count_identifica_user_load - 1]}', '{$guarda_ip_load[$count_identifica_user_load]}', 'Aberta');";
     $cria_partida = mysqli_query($conn, $sql_cria_partida);
     header('Location: ../../partida.php');
+
+//vc é o o3 e não tem 4
 } else{
     $count_timeout_fila = 1;
     $count_atualiza_ip_load = 1;
