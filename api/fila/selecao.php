@@ -45,6 +45,7 @@ while($row = mysqli_fetch_assoc($confere_insercao)){
 //vc é o 3, e tem um 4
 if((($count_identifica_user_load % 2) != 0) && (count($guarda_ip_load) > $count_identifica_user_load)){
     $sql_limpa_fila = "UPDATE load_partida SET aceita = 'Y' WHERE jogador = '{$guarda_ip_load[$count_identifica_user_load]}' OR jogador = '{$guarda_ip_load[$count_identifica_user_load + 1]}';";
+    //acho que é um && na linha acima, sem neurose. já tem um cara depois na fila mesmo. e se não aceitar o outro tbm? não podemos tolerar isso
     if(count($guarda_insercao) >= 1){
         $limpa_fila = mysqli_query($conn, $sql_limpa_fila);
         header('Location: ../../partida.php');
@@ -69,6 +70,7 @@ if((($count_identifica_user_load % 2) != 0) && (count($guarda_ip_load) > $count_
     $count_timeout_fila = 1;
     $count_atualiza_ip_load = 1;
     $count_identifica_user_load = 1;
+    //pode apagar daqui
     $sql_verifica_usuarios_load = "SELECT jogador FROM load_partida WHERE aceita = 'N';";
     $verifica_usuarios_load = mysqli_query($conn, $sql_verifica_usuarios_load);
     $guarda_ip_load = array();
@@ -78,7 +80,8 @@ if((($count_identifica_user_load % 2) != 0) && (count($guarda_ip_load) > $count_
         $guarda_ip_load[$count_atualiza_ip_load] = $row['jogador'];
         $count_atualiza_ip_load++;
     }
-
+    //até aqui. já temos isso. não caímos em laços, então  nada mudou
+    //já esse debaixo é inútil. não tem como minha posição mudar, não preciso consutar ela novamente. ainda precisa pensar no se mudar, mas não fazendo isso
     while($guarda_ip_load[$count_identifica_user_load] != $ip){
         $count_identifica_user_load++;
         if($count_identifica_user_load > 20){
@@ -131,4 +134,5 @@ if((($count_identifica_user_load % 2) != 0) && (count($guarda_ip_load) > $count_
     }
 }
 
+//observações finais. devem ter coisas há melhorar nesse código, porém talvez não vamos mais usá-los. parece estar funcionando pro que precisamos
 ?>
