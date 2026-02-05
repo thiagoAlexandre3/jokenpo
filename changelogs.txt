@@ -3,4 +3,6 @@ Esse documento tem a intenção de organizar as branches:
 {
     dev0001: Mudar identificador de ip para randon
         quero testar apenas no computador o funcionamento  da partida, para termiar essa parte do código. para isso, vou suspender o uso do ip, já que com ele não da para testar sem dois dispositivos. usarei o randon e aplicaremos as correções da partida na branch principal
+
+        Mudanças de plano, manteremos o uso do ip, até ter um login, já que toda a aplicação usa ele e não temos outra autenticação. sendo asssim, a branch foi usada para apenas a correção lógica que faltava no código
 }
