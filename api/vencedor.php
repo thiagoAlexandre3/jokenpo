@@ -123,8 +123,10 @@ if($jogou){
 }
 
 //envia resultado
-$result = array($player, $vencedor);
+$result_s = array("player" => $player, "vencedor" => $vencedor);
+$result_j = json_encode($result_s);
 
-var_dump($result);
+header('Content-Type: application/json');
 
+echo $result_j;
 ?>

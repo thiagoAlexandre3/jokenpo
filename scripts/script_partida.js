@@ -26,7 +26,7 @@ function resultado(){
             type: 'POST',
             data: {data: dados},
             success: function(result){
-                document.getElementById('btn_compara').innerHTML = "jogador: " + result[42] + result + ", venceu";
+                document.getElementById('btn_compara').innerHTML = "jogador: " + result.vencedor + ", venceu";
             },
             error: function(jqXHR, textStatus, errorThrown) {
 
