@@ -4,25 +4,49 @@
     src: url(../fonts/Sono/static/Sono/Sono-Regular.ttf) format(opentype)
 }
 
+body {
+    background-color: rgb(95, 94, 94);
+}
+
 .container_players {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.jogadores {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 60px;
+    width: 190px;
+    background-color: sienna;
+    border-radius: 15px;
 }
 .cjogadores {
-    font-family: 'sono', Times;
-    font-size: 20px;
+    font-family: "sono", times;
+    font-size: 30px;
+    color: aliceblue;
+}
+.container_jogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: rgb(2, 119, 119);
+    border-radius: 70px;
 }
 .container_opcoes{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    background-color: aquamarine;
+    height: 300px;
     border-radius: 5px;
-    column-gap: 10px;
+    column-gap: 30px;
 }
 
 /*
@@ -38,7 +62,7 @@ n consegui fazer, então vamos pela imagem mesmo
 */
 
 .imagem1, .imagem2, .imagem3 {
-    background-color: darkkhaki;
+    background-color: rgb(189, 186, 135);
     border-radius: 20px;
     border: 0px;
     padding: 0px;
@@ -50,6 +74,7 @@ n consegui fazer, então vamos pela imagem mesmo
 
     comentário, pois se tirar o container cresce na tela toda
     */
+    cursor: pointer;
 }
 
 .pedra, .papel, .tesoura {
@@ -62,4 +87,14 @@ n consegui fazer, então vamos pela imagem mesmo
     width: 200px;
     height: 200px;
     border-radius: 20px;
+}
+
+#btn_compara{
+    background-color: lightcoral;
+    font-family: "sono", times;
+    font-size: 30px;
+    border: none;
+    box-shadow: 1px 1px 0px 2px rgb(105, 105, 105);
+    border-radius: 10px;
+    cursor: pointer;
 }

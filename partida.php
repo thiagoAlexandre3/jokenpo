@@ -12,23 +12,28 @@
 </head>
 <body>
     <div class="container_players">
-        <div class="jogador1"><p class="cjogadores">player 1</p></div> <!-- conteudo do display-->
+        <div class="jogadores" id="jogador1"><p class="cjogadores">player 1</p></div>
     </div>
-    <div class="container_opcoes">
-        <div class="imagem1">
-            <img id="fpedra" class="pedra" src="img/pedra.png" alt="pedra" onclick="fpedra()">     
+    <div class="container_jogo">
+        <div class="container_opcoes">
+            <div class="imagem1">
+                <img id="fpedra" class="pedra" src="img/pedra.png" alt="pedra" onclick="fpedra()">     
+            </div>
+            <div class="imagem2">
+                <img id="fpapel" class="papel" src="img/papel.png" alt="papel" onclick="fpapel()">
+            </div>
+            <div class="imagem3">
+                <img id="ftesoura" class="tesoura" src="img/tesoura.png" alt="tesoura"  onclick="ftesoura()">
+            </div>
         </div>
-        <div class="imagem2">
-            <img id="fpapel" class="papel" src="img/papel.png" alt="papel" onclick="fpapel()">
-        </div>
-        <div class="imagem3">
-            <img id="ftesoura" class="tesoura" src="img/tesoura.png" alt="tesoura"  onclick="ftesoura()">
+        <div class="container_button">
+            <button id="btn_compara" onclick="resultado()">Resultado</button>
         </div>
     </div>
+    
     <div class="container_players">
-        <div class="jogador2"><p class="cjogadores">player 2</p></div>
+        <div class="jogadores" id="jogador2"><p class="cjogadores">player 2</p></div>
     </div>
-    <button id="btn_compara" onclick="resultado()">Resultado</button>
 
 </body>
 </html>
